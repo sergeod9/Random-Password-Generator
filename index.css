@@ -1,0 +1,148 @@
+:root{
+    --color-primary-dark: #1F2937;
+    --color-primary: #4ADF86;
+    --color-secondary: rgb(74,86,103);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px dotted blue;*/
+}
+
+body {
+    margin: 0 auto;
+    width: 70vw;
+    background-color: rgb(74,86,103);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main--vertical{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.main--container{
+    margin: 0 auto;
+    background-color: var(--color-primary-dark);
+    padding: 32px 64px 64px;
+    border-radius: 5px;
+    color: white;
+}
+.hero{
+    margin-bottom: 64px;
+}
+.heading-color{
+    color: var(--color-primary);
+}
+h1{
+    margin-bottom: 8px;
+    font-size: 2.5em;
+}
+p{
+    font-weight: 200;
+    margin-bottom: 16px;
+}
+
+hr{
+    border-color: var(--color-secondary);
+    margin-block: 8px;
+}
+
+.options--container *{
+    padding-left: 12px;
+    padding-top: 2px;
+    margin-top: 2px;
+}
+.checkbox--container{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    
+}
+
+input[type = "checkbox"]{
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+}
+
+#pass-length{
+    width: 60px;
+    margin-bottom: 16px;
+    margin-left: 0;
+    padding: 8px;
+}
+
+input{
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #1F2937;
+    color: white;
+    border-radius: 3px;
+    padding: 8px 16px;
+    filter: brightness(70%);
+}
+input:focus, button:focus{
+    outline: none;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+button{
+    background-color: var(--color-primary);
+    padding: 8px 16px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    border-radius: 3px;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+}
+button:focus{
+    background-color: var(--color-primary);
+}
+
+.password-fields{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.password-fields *{
+    color: var(--color-primary);
+    border: none;
+}
+.password-fields input::selection{
+    background:var(--color-primary);
+    color: black;
+}
+
+.fields{
+    display:flex;
+    flex-direction: column;
+    gap: 8px
+}
+.fields > label{
+    color: lightslategray;
+}
+small{
+    display: block;
+    margin-top: 16px;
+    color: lightslategray;
+}
+code{
+    border: 1px solid gray;
+    color: lightgray;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background-color: var(--color-primary-dark);
+    filter: brightness(80%)       
+}
+
+#error-message{
+    color: palevioletred;
+    font-weight: 400;
+    margin-top: 8px;
+}
