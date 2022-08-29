@@ -136,15 +136,19 @@ button:focus{
 .fields > label{
     color: lightslategray;
 }
-small{
+.instructions{
+    line-height: 1.5em;
+}
+.instructions small{
     display: block;
     margin-top: 16px;
     color: lightslategray;
 }
-code{
+.instructions code{
     border: 1px solid gray;
     color: lightgray;
     padding: 3px 6px;
+    margin: 0 0.2em;
     border-radius: 5px;
     background-color: var(--color-primary-dark);
     filter: brightness(80%)       
@@ -154,4 +158,51 @@ code{
     color: palevioletred;
     font-weight: 400;
     margin-top: 8px;
+}
+
+@media screen and (max-width: 1000px){
+    body{
+        font-size: 35px;
+        line-height: 80px;
+    }
+    hr{
+        margin-block: 50px;
+    }
+    h1{
+        font-size: 2em;
+        letter-spacing: justify;
+    }
+    .main--container{
+        width: 95vw;
+        margin: 0;
+        padding: 64px 80px 120px;
+        border-radius: 10px;
+    }
+    button{
+        width: 100%;
+        font-size: 60px;
+        padding: 20px;
+    }
+
+    .password-fields{
+        flex-direction: column;
+    }
+    input[type = "checkbox"]{
+        width: 50px;
+        height: 50px;
+        margin-left: 6px;
+    }
+    .fields input{
+        font-size: 45px;
+        padding: 10px 20px;
+    }
+    .fields label{
+        font-size: 1.2em;
+    }
+    .instructions{
+        margin-top: 60px;
+    }
+    .instructions small{
+        font-size: 1em;
+    }
 }
