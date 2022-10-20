@@ -61,12 +61,32 @@ function generatePassword(){
         isError = false
     }
     if (!isError){
+        let randomIndex = Math.floor(Math.random()*includedArray.length)
+
         for (let i = 0; i < passLength ; i++){
-            const randomIndex = Math.floor(Math.random()*includedArray.length)
+            randomIndex = Math.floor(Math.random()*includedArray.length)
             password += includedArray[randomIndex]
         }
+        // If numbers are required but not included, replace a character with a number
+        if (isNumbersIncluded && !numbersCharacters.some(number=> password.includes(number))){
+            const replacementNumber = numbersCharacters[Math.floor(Math.random()*numbersCharacters.length)]
+            const replaced = password[1]
+            const newPassword = password.replace(replaced, replacementNumber)
+            password = newPassword
+            console.log("number added")
+        }
+        // If symbols are required but not included, replace a character with a symbol
+        if (isSymbolsIncluded && !symbolsCharacters.some(symbol => password.includes(symbol))){
+            const replacementSymbol = symbolsCharacters[Math.floor(Math.random()*symbolsCharacters.length)]
+            const replaced = password[0]
+            const newPassword = password.replace(replaced, replacementSymbol)
+            password = newPassword
+            console.log("symbol added")       
+        }
     }
+
     return password
+
 }
 
 passField_1.addEventListener('click', copyToClipboard)
