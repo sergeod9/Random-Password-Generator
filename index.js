@@ -28,11 +28,11 @@ passLengthElement.addEventListener('change', ()=> passLength = parseInt(passLeng
 function generateTwoPasswords(){
     const pass1 = generatePassword()
     const pass2  = generatePassword()
-    passField_1.value = ""
-    passField_2.value = ""
+    passField_1.textContent = ""
+    passField_2.textContent = ""
     if (pass1 !== "" && pass2 !== ""){
-        passField_1.value = pass1
-        passField_2.value = pass2
+        passField_1.textContent = pass1
+        passField_2.textContent = pass2
         errorMessageElement.innerText = ""
     }
     else{
@@ -73,14 +73,14 @@ passField_1.addEventListener('click', copyToClipboard)
 passField_2.addEventListener('click', copyToClipboard)
 
 function copyToClipboard(e){
-    if (e.target.value){
-        navigator.clipboard.writeText(e.target.value)
+    if (e.target.textContent){
+        navigator.clipboard.writeText(e.target.textContent)
         document.getElementById("copied-message").textContent = 'Password copied'
         document.getElementById('copied-message--modal').classList.add('show-message')
         setTimeout(()=> {
             document.getElementById('copied-message--modal').classList.remove('show-message')
-            passField_1.value=""
-            passField_2.value=""    
+            passField_1.textContent=""
+            passField_2.textContent=""    
         }, 2000)
         
     }

@@ -159,6 +159,7 @@ button:focus{
 .password-fields{
     display: flex;
     flex-direction: row;
+    width: 100%;
     gap: 10px;
 }
 .password-fields *{
@@ -173,10 +174,18 @@ button:focus{
 .fields{
     display:flex;
     flex-direction: column;
-    gap: 8px
+    gap: 8px;
+    width: 100%;
 }
 .fields > label{
     color: lightslategray;
+}
+
+.password-option{
+    font-size: 1.5rem;
+    background-color: var(--color-secondary-dark);
+    padding: 0.5em 1em;
+    min-height: 3.8rem;
 }
 .instructions{
     line-height: 1.5em;
