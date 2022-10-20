@@ -208,8 +208,8 @@ button:focus{
     .hero{
         margin: 1em;
     }
-    .hero img{
-        height: 150px;
+    .hero-text h1{
+        font-size: 1.5rem;
     }
     .main--vertical{
         height: 100%;
