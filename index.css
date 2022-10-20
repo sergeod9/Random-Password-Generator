@@ -68,6 +68,13 @@ body {
 .hero{
     margin-bottom: 2em;
     line-height: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+}
+.hero img{
+    height: 100px;
 }
 .heading-color{
     color: var(--color-primary);
@@ -173,20 +180,9 @@ button:focus{
 }
 .instructions{
     line-height: 1.5em;
-}
-.instructions small{
-    display: block;
     margin-top: 16px;
     color: lightslategray;
-}
-.instructions code{
-    border: 1px solid gray;
-    color: lightgray;
-    padding: 3px 6px;
-    margin: 0 0.2em;
-    border-radius: 5px;
-    background-color: var(--color-primary-dark);
-    filter: brightness(80%)       
+    font-weight: 400;
 }
 
 #error-message{
@@ -202,6 +198,9 @@ button:focus{
     }
     .hero{
         margin: 1em;
+    }
+    .hero img{
+        height: 150px;
     }
     .main--vertical{
         height: 100%;
@@ -246,9 +245,7 @@ button:focus{
         padding: 0.5em 1em;
         font-size: 1.5rem;
     }
-    .instructions{
-        display: none;
-    }
+
     .modal-message p{
         font-size: 1rem;
     }
