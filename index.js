@@ -70,7 +70,7 @@ function generatePassword(){
         // If numbers are required but not included, replace a character with a number
         if (isNumbersIncluded && !numbersCharacters.some(number=> password.includes(number))){
             const replacementNumber = numbersCharacters[Math.floor(Math.random()*numbersCharacters.length)]
-            const replaced = password[1]
+            const replaced = password[Math.floor(Math.random()* passLength)]
             const newPassword = password.replace(replaced, replacementNumber)
             password = newPassword
             console.log("number added")
@@ -78,7 +78,7 @@ function generatePassword(){
         // If symbols are required but not included, replace a character with a symbol
         if (isSymbolsIncluded && !symbolsCharacters.some(symbol => password.includes(symbol))){
             const replacementSymbol = symbolsCharacters[Math.floor(Math.random()*symbolsCharacters.length)]
-            const replaced = password[0]
+            const replaced = password[Math.floor(Math.random()*passLength)]
             const newPassword = password.replace(replaced, replacementSymbol)
             password = newPassword
             console.log("symbol added")       
