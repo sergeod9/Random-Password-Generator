@@ -69,4 +69,19 @@ function generatePassword(){
     return password
 }
 
+passField_1.addEventListener('click', copyToClipboard)
+passField_2.addEventListener('click', copyToClipboard)
 
+function copyToClipboard(e){
+    if (e.target.value){
+        navigator.clipboard.writeText(e.target.value)
+        document.getElementById("copied-message").textContent = 'Password copied'
+        document.getElementById('copied-message--modal').classList.add('show-message')
+        setTimeout(()=> {
+            document.getElementById('copied-message--modal').classList.remove('show-message')
+            passField_1.value=""
+            passField_2.value=""    
+        }, 2000)
+        
+    }
+}

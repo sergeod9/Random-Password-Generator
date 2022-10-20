@@ -1,11 +1,20 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="modal-message" id="copied-message--modal">
+            <p id="copied-message"></p>
+        </div>
         <div class="main--vertical">
             <div class="main--container">
                 <div class="hero">
@@ -19,7 +28,7 @@
                             name="numbers-chk" 
                             id="numbers-chk" 
                             checked />
-                        <lable for="numbers-chk">Include Numbers</lable>
+                        <label for="numbers-chk">Include Numbers</label>
                     </div>
                     
                     <div class="checkbox--container">
@@ -27,7 +36,7 @@
                             name="symbols-chk" 
                             id="symbols-chk" 
                             checked />
-                        <lable for="symbols-chk" checked>Include Symbols</label>
+                        <label for="symbols-chk" checked>Include Symbols</label>
                     </div>
                     
                     <div>
@@ -38,7 +47,7 @@
                             min=6
                             max=25 
                             checked />
-                        <lable for="symbols-chk" checked>Password Length</label>
+                        <label for="symbols-chk" checked>Password Length</label>
                     </div>
                 </div>
                 <hr />
@@ -47,14 +56,14 @@
                 <div class="password-fields">
                     <div class="fields">
                         <label for="pass-field-1">Option #1</label>
-                        <input type="text" id="pass-field--1" name="pass-field--1" disabled/>
+                        <input type="text" id="pass-field--1" name="pass-field--1"/>
                     </div>
                     <div class="fields">
                         <label for="pass-field-2">Option #2</label> 
-                        <input type="text" id="pass-field--2" name="pass-field--2" disabled/>
+                        <input type="text" id="pass-field--2" name="pass-field--2"/>
                     </div>
                 </div>
-                <ul>
+                <ul class="instructions">
                     <li>
                         <small>Select the option you prefer, press <code>Ctrl</code>+<code>C</code>(PC) or <code>⌘</code>+<code>C</code>(MacOS) to copy</small>    
                     </li>
