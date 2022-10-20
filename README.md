@@ -1,13 +1,15 @@
-# cob1846f1b31b4a68951dd3eb
+# Random Password Generator
 
-## About Scrimba
+## Made using
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+- HTML
+- CSS
+- JAVASCRIPT
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+This is a simple client side random password generator, you can choose whether the proposed passwords might include numbers and symbols or not, and you can set the desired length of the password.
+When you click the 'Generate Passwords' button, you will get 2 options for a password to choose from.
 
-Happy Coding!
+## Links
+
+- [GitHub Pages](https://sergeod9.github.io/Random-Password-Generator/)
+- [Codepen](https://codepen.io/georgesdahdouh/pen/PoRybXJ)
